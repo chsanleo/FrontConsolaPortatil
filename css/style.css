@@ -18,9 +18,8 @@
     grid-template-columns: 120px 210px 120px;
     grid-template-rows: 60px 120px 60px;
     grid-template-areas: "headerConsole headerConsole headerConsole"
-                         "control4 screen actionsButtons"
+                         "movbuttons screen actionsButtons"
                          "control6 console-logo control8";
-    border: 1px solid blue;
     text-align: center;
     background:url('../img/consola.jpg');
     background-size: cover;
@@ -48,42 +47,81 @@
                          "cross cross";
 }
 
-.buttons-right{
+.buttons{
     background-color: black;
-    text-shadow: grey;
     font-weight: bold;
     align-items: center;
     color: white;
 }
-.triangle{
+.actionsButtons>.triangle{
     grid-area: triangle;
 }
-.triangle:hover{
+.actionsButtons>.triangle:hover{
     color: red;
 }
-.square{
+.actionsButtons>.square{
     text-align:center;
     grid-area: square;
 }
-.square:hover{
+.actionsButtons>.square:hover{
     color: yellow;
 }
-.circle{
+.actionsButtons>.circle{
     grid-area: circle;
 }
-.circle:hover{
+.actionsButtons>.circle:hover{
     color: green;
 }
-.cross{
+.actionsButtons>.cross{
     grid-area:cross;
 }
-.cross:hover{
+.actionsButtons>.cross:hover{
     color: purple;
 }
-
-.console-logo{
+@font-face{
+    font-family: PlayStationFont;
+    src:url("../fonts/The\ Rave\ Is\ In\ Your\ Pants.otf")
+}
+.console>.logo{
     grid-area: console-logo;
     background-color: black;
     color:white;
     text-align: center; 
+    height: 70%;
+    font-family: PlayStationFont;
+}
+
+.movButtons{
+    grid-area: movbuttons;
+    display:grid;
+    grid-template-columns:repeat(2 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas: "up up"
+                         "left right"
+                         "down down";
+}
+.movButtons>.up{
+    grid-area: up;
+}
+.movButtons>.up:hover{
+    color: tomato;
+}
+.movButtons>.left{
+    text-align:center;
+    grid-area: left;
+}
+.movButtons>.left:hover{
+    color: turquoise;
+}
+.movButtons>.right{
+    grid-area: right;
+}
+.movButtons>.right:hover{
+    color: teal;
+}
+.movButtons>.down{
+    grid-area:down;
+}
+.movButtons>.down:hover{
+    color: thistle;
 }

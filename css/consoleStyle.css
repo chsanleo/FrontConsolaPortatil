@@ -1,0 +1,112 @@
+.console{
+    display:grid; 
+    grid-template-columns: 120px 210px 120px;
+    grid-template-rows: 60px 120px 60px;
+    grid-template-areas: "headerConsole headerConsole headerConsole"
+                         "movbuttons screen actionsButtons"
+                         "control6 console-logo control8";
+    text-align: center;
+    background:url('../img/consola.jpg');
+    background-size: cover;
+    align-items: center;
+}
+
+.console>.screen {
+    grid-area:screen;
+    height: 120px;
+    width: 210px;
+}
+
+.console> .screen:hover{
+    background: url('../img/logo.jpg');
+    background-size: cover;
+}
+
+.actionsButtons{
+    grid-area: actionsButtons;
+    display:grid;
+    grid-template-columns:repeat(2 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas: "triangle triangle"
+                         "square circle"
+                         "cross cross";
+}
+
+.buttons{
+    background-color: black;
+    font-weight: bold;
+    align-items: center;
+    color: white;
+}
+.actionsButtons>.triangle{
+    grid-area: triangle;
+}
+.actionsButtons>.triangle:hover{
+    color: red;
+}
+.actionsButtons>.square{
+    text-align:center;
+    grid-area: square;
+}
+.actionsButtons>.square:hover{
+    color: yellow;
+}
+.actionsButtons>.circle{
+    grid-area: circle;
+}
+.actionsButtons>.circle:hover{
+    color: green;
+}
+.actionsButtons>.cross{
+    grid-area:cross;
+}
+.actionsButtons>.cross:hover{
+    color: purple;
+}
+@font-face{
+    font-family: PlayStationFont;
+    src:url("../fonts/The\ Rave\ Is\ In\ Your\ Pants.otf")
+}
+.console>.logo{
+    grid-area: console-logo;
+    background-color: black;
+    color:white;
+    text-align: center; 
+    height: 70%;
+    font-family: PlayStationFont;
+}
+
+.movButtons{
+    grid-area: movbuttons;
+    display:grid;
+    grid-template-columns:repeat(2 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas: "up up"
+                         "left right"
+                         "down down";
+}
+.movButtons>.up{
+    grid-area: up;
+}
+.movButtons>.up:hover{
+    color: tomato;
+}
+.movButtons>.left{
+    text-align:center;
+    grid-area: left;
+}
+.movButtons>.left:hover{
+    color: turquoise;
+}
+.movButtons>.right{
+    grid-area: right;
+}
+.movButtons>.right:hover{
+    color: teal;
+}
+.movButtons>.down{
+    grid-area:down;
+}
+.movButtons>.down:hover{
+    color: thistle;
+}

@@ -63,10 +63,7 @@
 .actionsButtons>.cross:hover{
     color: purple;
 }
-@font-face{
-    font-family: PlayStationFont;
-    src:url("../fonts/The\ Rave\ Is\ In\ Your\ Pants.otf")
-}
+
 .console>.logo{
     grid-area: console-logo;
     background-color: black;
